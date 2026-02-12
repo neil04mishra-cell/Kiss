@@ -26,40 +26,40 @@ body{
  width:95%;
 }
 
-/* heart shape */
+/* medium heart */
 .heart{
  position:relative;
- width:150px;
- height:150px;
+ width:110px;
+ height:110px;
  background:#ff4d6d;
  transform:rotate(-45deg);
- margin:20px auto;
- display:flex;
- justify-content:center;
- align-items:center;
- color:white;
- font-size:18px;
- font-weight:bold;
- text-align:center;
- padding:10px;
+ margin:20px auto 10px auto;
 }
 .heart:before,
 .heart:after{
  content:"";
  position:absolute;
- width:150px;
- height:150px;
+ width:110px;
+ height:110px;
  background:#ff4d6d;
  border-radius:50%;
 }
-.heart:before{ top:-75px; left:0; }
-.heart:after{ left:75px; top:0; }
+.heart:before{ top:-55px; left:0; }
+.heart:after{ left:55px; top:0; }
+
+/* text below heart */
+.kiss-title{
+ font-size:22px;
+ font-weight:bold;
+ color:#d63384;
+ margin-bottom:15px;
+}
 
 /* image */
 .kiss-img{
  width:280px;
  border-radius:15px;
- margin-top:15px;
+ margin-top:10px;
 }
 
 /* message */
@@ -102,8 +102,11 @@ video{
 
 <div class="container">
 
-<!-- romantic heart -->
-<div class="heart">
+<!-- medium heart -->
+<div class="heart"></div>
+
+<!-- text BELOW heart -->
+<div class="kiss-title">
 Happy Kiss Day Mistuu 💋
 </div>
 
@@ -135,7 +138,6 @@ function playKiss(){
  document.getElementById("videoBox").style.display="block";
  document.getElementById("kissVideo").play();
 
- /* auto scroll to video */
  document.getElementById("videoBox").scrollIntoView({
    behavior: "smooth"
  });
