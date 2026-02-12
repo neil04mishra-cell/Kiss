@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Kiss Day ❤️</title>
+
+<style>
+
+body{
+ text-align:center;
+ font-family:sans-serif;
+ background:linear-gradient(135deg,#ffccd5,#ffe4ec,#fff0f5);
+ margin:0;
+ padding:20px;
+ overflow-y:auto;
+}
+
+/* container */
+.container{
+ background:white;
+ padding:25px;
+ border-radius:20px;
+ display:inline-block;
+ box-shadow:0 10px 30px rgba(0,0,0,0.1);
+ max-width:420px;
+ width:95%;
+}
+
+/* heart shape */
+.heart{
+ position:relative;
+ width:150px;
+ height:150px;
+ background:#ff4d6d;
+ transform:rotate(-45deg);
+ margin:20px auto;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ color:white;
+ font-size:18px;
+ font-weight:bold;
+ text-align:center;
+ padding:10px;
+}
+.heart:before,
+.heart:after{
+ content:"";
+ position:absolute;
+ width:150px;
+ height:150px;
+ background:#ff4d6d;
+ border-radius:50%;
+}
+.heart:before{ top:-75px; left:0; }
+.heart:after{ left:75px; top:0; }
+
+/* image */
+.kiss-img{
+ width:280px;
+ border-radius:15px;
+ margin-top:15px;
+}
+
+/* message */
+.msg{
+ font-size:18px;
+ margin-top:15px;
+ color:#d63384;
+ line-height:1.6;
+}
+
+/* button */
+button{
+ padding:12px 25px;
+ font-size:16px;
+ border:none;
+ border-radius:25px;
+ margin-top:15px;
+ cursor:pointer;
+ background:#ff4da6;
+ color:white;
+}
+
+/* video */
+#videoBox{
+ display:none;
+ margin-top:30px;
+}
+
+video{
+ width:100%;
+ max-width:320px;
+ border-radius:15px;
+ box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- romantic heart -->
+<div class="heart">
+Happy Kiss Day Mistuu 💋
+</div>
+
+<!-- image -->
+<img src="kiss.jpg" class="kiss-img">
+
+<!-- message -->
+<div class="msg">
+Your kiss makes me forget everything… 💖 <br>
+I only have one addiction — and that's your kiss 💋
+</div>
+
+<h3>You wanna kiss me? 😚</h3>
+
+<button onclick="playKiss()">Touch me 💋</button>
+
+<!-- video -->
+<div id="videoBox">
+<video id="kissVideo" controls autoplay loop>
+  <source src="kissvideo.mp4" type="video/mp4">
+</video>
+</div>
+
+</div>
+
+<script>
+
+function playKiss(){
+ document.getElementById("videoBox").style.display="block";
+ document.getElementById("kissVideo").play();
+
+ /* auto scroll to video */
+ document.getElementById("videoBox").scrollIntoView({
+   behavior: "smooth"
+ });
+}
+
+</script>
+
+</body>
+</html>
